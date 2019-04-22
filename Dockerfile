@@ -5,6 +5,8 @@ MAINTAINER AlibabaSec
 ADD . /competition
 WORKDIR /competition
 
+RUN pip install Pillow
+
 # INSTALL cleverhans foolbox
 # pretrained_models
 RUN mkdir ./models
