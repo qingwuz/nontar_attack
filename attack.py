@@ -25,10 +25,10 @@ for line in File:
 	image_pil = PIL.Image.open(InputDirectory + "/" + filename)
 	image = numpy.asarray(image_pil.resize([SIZE, SIZE], PIL.Image.BILINEAR).convert("RGB")).astype(numpy.float32)
 
-	left = 36
-	right = 263
-	top = 36
-	bottom = 263
+	left = 45
+	right = 260
+	top = 45
+	bottom = 260
 
 	new_image = image.copy()
 	n = 1
