@@ -28,7 +28,7 @@ for line in File:
 
     image2 = zeros(image_pil.shape)
     for i in range(3):
-        image2[:,:,i] = filters.gaussian_filter(image_pil[:,:,i],8)
+        image2[:,:,i] = filters.gaussian_filter(image_pil[:,:,i],5)
     image = uint8(image2)
     new_image = Image.fromarray(image)
     #new_image = new_image.astype(numpy.uint8)
