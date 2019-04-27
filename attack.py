@@ -25,10 +25,15 @@ for line in File:
     targeted_label = int(split_line[2])
 
     image_pil = array(PIL.Image.open(InputDirectory + "/" + filename))
-
-    image2 = zeros(image_pil.shape)
+    
+    left = 20
+    right = 269
+    top = 20
+    bottom = 269
+    
+    image2 = image_pil.copy()#zeros(image_pil.shape)
     for i in range(3):
-        image2[:,:,i] = filters.gaussian_filter(image_pil[:,:,i],3.7)
+        image2[left:right, top:bottom,i] = filters.gaussian_filter(image_pil[left:right, top:bottom,i],3.8)
     image = uint8(image2)
     new_image = Image.fromarray(image)
     #new_image = new_image.astype(numpy.uint8)
