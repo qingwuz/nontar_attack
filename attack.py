@@ -26,10 +26,10 @@ for line in File:
 
     image_pil = array(PIL.Image.open(InputDirectory + "/" + filename))
     
-    left = 10
-    right = 295
-    top = 10
-    bottom = 295
+    left = 5
+    right = 293
+    top = 5
+    bottom = 293
     
     image2 = image_pil.copy()#zeros(image_pil.shape)
     for i in range(3):
