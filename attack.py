@@ -27,9 +27,9 @@ for line in File:
     image_pil = array(PIL.Image.open(InputDirectory + "/" + filename))
     
     left = 20
-    right = 269
+    right = 299
     top = 20
-    bottom = 269
+    bottom = 299
     
     image2 = image_pil.copy()#zeros(image_pil.shape)
     for i in range(3):
